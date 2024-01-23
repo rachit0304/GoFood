@@ -5,7 +5,7 @@ const { query, validationResult } = require('express-validator');
 
 const bcrypt = require('bcryptjs')
 const jwt = require('jsonwebtoken')
-const jwtSecret = "iamrachitsharma"
+const jwtSecret = process.env.REACT_APP_JWT_SECRET;
 
 router.post('/createuser',
 // [query('name','name cannot be empty').notEmpty(),

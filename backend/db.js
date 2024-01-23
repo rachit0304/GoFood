@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const mongoURI = "mongodb+srv://gofood:rachit2803@cluster0.ywnh2y3.mongodb.net/gofoodmern"
+const mongoURI = process.env.REACT_APP_MONGOURI;
 
 const mongoDB = async()=>{
   await mongoose.connect(mongoURI,{useNewUrlParser:true}, async(error,result)=>{
