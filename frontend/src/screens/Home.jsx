@@ -2,22 +2,28 @@ import React, { useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Card from "../components/Card";
+import Loader from "../components/Loader";
 
 export default function Home() {
 
   const [search , setSearch] = useState("");
   let [foodCat, setFoodcat] = useState([]); // we use map function for looping over an array only , we cant loop over an object by using map fo that we use forin
+
+  const [fetching , setFetching] = useState(false);
   
   let [fooditem, setFooditem] = useState([]);
 
   const loadData = async () => {
+    setFetching(true);
     let response = await fetch("https://go-food-server.onrender.com/api/foodData", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
       }
-    }).then(response => response.json()).then(data => setFoodcat(data) ).catch(err => console.log("error"))
+      
+    }).then(response => response.json()).then(data => setFoodcat(data) ).catch(err => console.log("error").then(setFetching(false))
     // console.log(response)
+    
  
 };
 
@@ -66,7 +72,8 @@ export default function Home() {
 
       <div className="container">
       {
-    
+        {fetching && <Loader/>}
+        
         foodCat[1] && foodCat[1].map(data=>(
    
               <div className="row mb-3">
