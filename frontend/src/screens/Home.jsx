@@ -21,8 +21,10 @@ export default function Home() {
         "Content-Type": "application/json"
       }
       
-    }).then(response => response.json()).then(data => setFoodcat(data) ).catch(err => console.log("error").then(setFetching(false))
-    // console.log(response)
+    }).then(response => response.json()).then(data => {
+      setFoodcat(data);
+      setFetching(false);
+    } ).catch(err => console.log("error")  
     
  
 };
