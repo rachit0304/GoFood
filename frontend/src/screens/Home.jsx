@@ -73,10 +73,13 @@ export default function Home() {
 
 
       <div className="container">
-      {
-        {fetching && <Loader/>}
+         {
+         fetching && <Loader/>
+         }
         
-        foodCat[1] && foodCat[1].map(data=>(
+      {
+        
+       !fetching && foodCat[1] && foodCat[1].map(data=>(
    
               <div className="row mb-3">
              
