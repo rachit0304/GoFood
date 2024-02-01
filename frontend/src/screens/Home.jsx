@@ -24,7 +24,7 @@ export default function Home() {
     }).then(response => response.json()).then(data => {
       setFoodcat(data);
       setFetching(false);
-    } ).catch(err => console.log("error")  
+    } ).catch(err => console.log("error"))
     
  
 };
