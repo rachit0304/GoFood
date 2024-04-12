@@ -7,6 +7,45 @@
   pointer-events: none;
 }
 
+.mobile-search{
+  display: none;
+}
+
+.nav-item{
+  list-style: none;
+  margin-top: 3%;
+  position: relative;
+  left: -204%;
+  white-space: nowrap;
+}
+.slide{
+  margin: 3%;
+}
+
+.navbar-brand{
+  margin-bottom: 1%;
+  font-weight: 700;
+}
+
+.form-control{
+  height: 10%;
+  margin-top: 3%;
+}
+
+.myorders{
+  margin-bottom: 3%;
+  color: yellow;
+  float: left;
+}
+
+.navbar{
+  margin: 0 3%;
+}
+
+.btn{
+  margin: 3% 2%;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -39,4 +78,27 @@
 
 .spinner{
   margin: 10% 0;
+}
+
+@media (max-width: 700px) {
+  .nav-temp{
+      display: none;
+  }
+
+  .nav-item{
+    list-style: none;
+ 
+  }
+
+  
+}
+
+@media (max-width: 990px) {
+
+  .mobile-search{
+      display: inline;
+  }
+  .mobile-search-menu{
+      display: none;
+  }
 }
