@@ -83,7 +83,7 @@ export default function Home() {
         
        !fetching && foodCat[1] && foodCat[1].map(data=>(
    
-              <div className="row mb-3">
+              <div className="row mb-3 mx-5">
              
                   <div key={data._id}  className="fs-3 m-3">
                     {data.CategoryName}
