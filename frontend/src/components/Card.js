@@ -32,15 +32,13 @@ export default function Card(props) {
             return
         }
         await dispatch({type:"ADD" ,id: props.fooditem._id, name: props.fooditem.name , price: finalPrice ,qty: qty, size: size })
-        console.log(data)
+
     }
 
     let finalPrice = (qty*parseInt(options[size]))
 
     useEffect(()=>{
         setSize(priceRef.current.value)
-        console.log(setSize)
-        console.log("setsize")
     })
 
 
