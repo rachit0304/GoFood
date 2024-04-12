@@ -19,54 +19,125 @@ export default function Navbar() {
 
   return (
     <div>
-     <nav className="navbar navbar-expand-lg navbar-dark bg-success">
-  <Link className="navbar-brand fs-1 fst-italic" to="/">GoFood</Link>
-  {/* <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span className="navbar-toggler-icon"></span>
-  </button> */}
+     <nav className="navbar navbar-expand-lg">
+      <div class="container-fluid">
+         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="true" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <form class="mobile-search" role="search">
+            <input style={{"width" : "35vw" }} class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+          </form>
+  <Link className="navbar-brand" to="/">GoFood</Link>
 
-  <div className="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul className="navbar-nav me-auto mb-2">
-      <li className="nav-item ">
-        <Link className="nav-link active fs-5 my-2 py-2 mx-2" to="/">Home <span className="sr-only"></span></Link>
+  <div className="collapse navbar-collapse nav-temp" id="navbarSupportedContent">
+
+    <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+      {/* <li className="nav-item">
+        <Link className="nav-link" to="/">
+        Home <span className="sr-only"></span></Link>
       </li>
+      <li>
+            <Link to="/" className="nav-link link-dark">
+              About</Link>
+      </li>
+      <li>
+            <Link to="#" className="nav-link link-dark">
+              Contact Us</Link>
+      </li> */}
 
-      {
-        (localStorage.getItem("authToken"))
-        ? 
-        <li className="nav-item ">
-        <Link className="btn bg-white text-success my-3" to="/myorders">My Orders <span className="sr-only"></span></Link>
-        {/* <Link className="btn bg-white text-success mx-2" style={{width : '150px'}} to="/" onClick={()=>{setCartView(true)}}>My Account {" "} <span className="sr-only"></span></Link> */}
-
-        </li>
-        : ""}
+      </ul>
      
-     
-    </ul>
 
-    <div className='d-flex'>
+       <div className='d-flex'>
+       <input style={{"width" : "25vw"}} class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+
     {
         (!localStorage.getItem("authToken"))
         ? 
         <>
-        <Link className="btn bg-white text-success mx-1" to="/login">Login</Link>
+       
+        <Link className="btn btn-outline-primary btn-sm btn-f" to="/login">Login</Link>
       
-        <Link className="btn bg-white text-success mx-1" to="/createuser">Signup</Link>
+        <Link className="btn btn-outline-success btn-sm btn-f" to="/createuser">Signup</Link>
         </>
         : <>
         <Link className="btn bg-white text-success mx-2" style={{width : '60px'}} to="/" onClick={()=>{setCartView(true)}}>Cart {" "} <Badge pill bg="danger">{data.length}</Badge> <span className="sr-only"></span></Link>
 
        {cartView ? <Modal onClose={()=>{setCartView(false)}} ><Cart/></Modal>:null}
         <Link className="btn bg-white text-danger mx-2" to="/login" onClick={handleLogout}>Logout <span className="sr-only"></span></Link>
+        <li className="nav-item ">
+        <Link className="btn bg-white text-success myorders my-0"   to="/myorders">My Orders <span className="sr-only"></span></Link>
+        {/* <Link className="btn bg-white text-success mx-2" style={{width : '150px'}} to="/" onClick={()=>{setCartView(true)}}>My Account {" "} <span className="sr-only"></span></Link> */}
+
+        </li>
         </>
         }
     
-       
     
     </div>
-   
+     
+
+    </div>
+
+  
+
   </div>
 </nav>
+
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <div class="d-flex flex-column flex-shrink-0 p-3 bg-light" style={{"width" : "280px"}}>
+     
+        <ul class="nav nav-pills flex-column mb-auto">
+          {/* <li class="nav-item">
+            <a href="#" class="nav-link active" aria-current="page">
+              <svg class="bi me-2" width="16" height="16"></svg>
+              Home
+            </a>
+          </li>
+          <li>
+            <a href="#" class="nav-link link-dark">
+              <svg class="bi me-2" width="16" height="16"></svg>
+              About
+            </a>
+          </li>
+          <li>
+            <a href="#" class="nav-link link-dark">
+              <svg class="bi me-2" width="16" height="16"></svg>
+              Contact US
+            </a>
+          </li> */}
+        </ul>
+
+        {
+        (!localStorage.getItem("authToken"))
+        ? 
+        <>
+       
+        <Link className="btn btn-outline-primary btn-sm btn-f" to="/login">Login</Link>
+      
+        <Link className="btn btn-outline-success btn-sm btn-f" to="/createuser">Signup</Link>
+        </>
+        : <>
+        <Link className="btn bg-white text-success mx-2" style={{width : '60px'}} to="/" onClick={()=>{setCartView(true)}}>Cart {" "} <Badge pill bg="danger">{data.length}</Badge> <span className="sr-only"></span></Link>
+
+       {cartView ? <Modal onClose={()=>{setCartView(false)}} ><Cart/></Modal>:null}
+        <Link className="btn bg-white text-danger mx-2" to="/login" onClick={handleLogout}>Logout <span className="sr-only"></span></Link>
+        <li className="nav-item ">
+        <Link className="btn bg-white text-success myorders my-0"   to="/myorders">My Orders <span className="sr-only"></span></Link>
+        {/* <Link className="btn bg-white text-success mx-2" style={{width : '150px'}} to="/" onClick={()=>{setCartView(true)}}>My Account {" "} <span className="sr-only"></span></Link> */}
+
+        </li>
+        </>
+        }
+      
+        <hr />
+        <form class="mobile-search-menu" role="search">
+          <input style={{"width" : "25vw"}} class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+        </form>
+  
+      </div>
+      </div>
+
     </div>
   )
 }
