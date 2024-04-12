@@ -21,6 +21,8 @@ export default function Navbar() {
     <div>
      <nav className="navbar navbar-expand-lg">
       <div class="container-fluid">
+          <i className="fa-solid fa-bars"></i>
+
          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="true" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -30,7 +32,7 @@ export default function Navbar() {
   <Link className="navbar-brand" to="/">GoFood</Link>
 
   <div className="collapse navbar-collapse nav-temp" id="navbarSupportedContent">
-
+    
     <ul className="navbar-nav me-auto mb-2 mb-lg-0">
       {/* <li className="nav-item">
         <Link className="nav-link" to="/">
