@@ -42,7 +42,7 @@ export default function Home() {
       </div>
 
       <div>
-          <div id="carouselExampleControls" className="carousel slide" data-bs-ride="carousel">
+          <div id="carouselControls" className="carousel slide" data-bs-ride="carousel">
                 <div className="carousel-inner" id='carousel'>
                     <div className="carousel-caption" style={{zIndex: "10"}}>
                     <div className="d-flex justify-content-center">
@@ -51,20 +51,20 @@ export default function Home() {
                     </div>
                     </div>
                 <div className="carousel-item active">
-                <img src="https://source.unsplash.com/random/600x400/?burger" className="d-block w-100" alt="..."/>
+                <img src="https://source.unsplash.com/random/600x400/?burger" className="d-block w-100" alt="burger image"/>
                 </div>
                 <div className="carousel-item">
-                <img src="https://source.unsplash.com/random/600x400/?sandwhich" className="d-block w-100" alt="..."/>
+                <img src="https://source.unsplash.com/random/600x400/?sandwhich" className="d-block w-100" alt="sandwhich image"/>
                 </div>
                 <div className="carousel-item">
-                <img src="https://source.unsplash.com/random/600x400/?pizza" className="d-block w-100" alt="..."/>
+                <img src="https://source.unsplash.com/random/600x400/?pizza" className="d-block w-100" alt="pizza image"/>
                 </div>
             </div>
-            <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+            <button className="carousel-control-prev" type="button" data-bs-target="#carouselControls" data-bs-slide="prev">
                 <span className="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span className="visually-hidden">Previous</span>
             </button>
-            <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+            <button className="carousel-control-next" type="button" data-bs-target="#carouselControls" data-bs-slide="next">
                 <span className="carousel-control-next-icon" aria-hidden="true"></span>
                 <span className="visually-hidden">Next</span>
             </button>
