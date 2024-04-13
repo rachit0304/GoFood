@@ -21,10 +21,10 @@ export default function Navbar() {
     <div>
      <nav className="navbar navbar-expand-lg">
       <div class="container-fluid">
-          <i className="fa-solid fa-bars"></i>
+       
 
          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="true" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+            <i className="fa-solid fa-bars"></i>
           </button>
           <form class="mobile-search" role="search">
             <input style={{"width" : "35vw" }} class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
