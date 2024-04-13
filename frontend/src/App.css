@@ -18,6 +18,10 @@
   left: -204%;
   white-space: nowrap;
 }
+
+img{
+    height: 35vw;
+}
 .slide{
   margin: 3%;
 }
