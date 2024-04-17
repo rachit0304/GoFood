@@ -20,10 +20,11 @@
 }
 
 img{
-    height: 35vw;
+    height: 30vw;
 }
 .slide{
   margin: 3%;
+  margin-top: 0%;
 }
 
 .navbar-brand{
