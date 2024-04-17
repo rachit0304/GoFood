@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Caraousel({search, setSearch}) {
+export default function Caraousel() {
   return (
     <div>
        <div id="carouselControls" className="carousel slide" data-bs-ride="carousel">
