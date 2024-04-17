@@ -39,10 +39,10 @@ export default function Home() {
     <div>
       <div>
         
-        <Navbar />
+        <Navbar search={search} setSearch={setSearch} />
       </div>
 
-  <Caraousel search={search} setSearch={setSearch} />
+  <Caraousel />
 
 
       <div className="container">
