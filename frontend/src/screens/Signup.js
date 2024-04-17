@@ -19,7 +19,6 @@ export default function Signup() {
         });
 
         const json = await response.json();
-        console.log(json);
         alert("You are registerd successfully")
         navigate('/login');
 
