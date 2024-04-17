@@ -11,13 +11,13 @@ export default function Caraousel({search, setSearch}) {
                     </div>
                     </div>
                 <div className="carousel-item active imgage">
-                <img src="https://source.unsplash.com/random/500x300/?burger" className="d-block w-100" alt="Burger Image"/>
+                <img src="https://source.unsplash.com/random/600x400/?burger" className="d-block w-100" alt="Burger Image"/>
                 </div>
                 <div className="carousel-item">
-                <img src="https://source.unsplash.com/random/500x300/?sandwhich" className="d-block w-100" alt="Sandwhich Image"/>
+                <img src="https://source.unsplash.com/random/600x400/?sandwhich" className="d-block w-100" alt="Sandwhich Image"/>
                 </div>
                 <div className="carousel-item">
-                <img src="https://source.unsplash.com/random/500x300/?pizza" className="d-block w-100" alt="Pizza Image"/>
+                <img src="https://source.unsplash.com/random/600x400/?pizza" className="d-block w-100" alt="Pizza Image"/>
                 </div>
             </div>
             <button className="carousel-control-prev" type="button" data-bs-target="#carouselControls" data-bs-slide="prev">
