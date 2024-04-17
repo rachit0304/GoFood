@@ -92,6 +92,10 @@
   .nav-temp{
       display: none;
   }
+  
+  .slide{
+    margin-top: 2%;
+  }
 
   .nav-item{
     list-style: none;
