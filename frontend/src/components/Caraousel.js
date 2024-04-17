@@ -7,7 +7,7 @@ export default function Caraousel({search, setSearch}) {
                 <div className="carousel-inner" id='carousel'>
                     <div className="carousel-caption" style={{zIndex: "10"}}>
                     <div className="d-flex justify-content-center">
-                    <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" value={search} onChange={(e)=>{setSearch(e.target.value)}} />
+                    // <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" value={search} onChange={(e)=>{setSearch(e.target.value)}} />
                     </div>
                     </div>
                 <div className="carousel-item active imgage">
