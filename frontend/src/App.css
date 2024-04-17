@@ -18,6 +18,12 @@
   left: -204%;
   white-space: nowrap;
 }
+
+.myorders{
+  white-space: nowrap;
+ 
+}
+
 .slide{
   margin: 3%;
   margin-top: 0%;
