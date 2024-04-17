@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState} from 'react'
 import { useDispatchCart , useCart } from './ContextReducer';
-import { Link } from 'react-router-dom';
+import { Link , useNavigate } from 'react-router-dom';
 
 export default function Card(props) {
     const priceRef = useRef();
@@ -10,8 +10,14 @@ export default function Card(props) {
     let priceOptions = Object.keys(options)
     let [qty , setQty] = useState(1)
     let [size , setSize] = useState("")
+    let navigate = useNavigate();
 
     const handleAddToCart = async ()=>{
+         if(!localStorage.getItem("authToken")){
+            navigate('/login');
+             return;
+        }
+        
         let food = []
         for(const item of data){
             if(item.id === props.fooditem.id)
