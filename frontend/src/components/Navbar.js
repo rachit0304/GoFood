@@ -6,7 +6,7 @@ import Modal from '../Modal';
 import { useCart } from './ContextReducer';
 
 
-export default function Navbar() {
+export default function Navbar({search, setSearch}) {
 
   const [cartView, setCartView] = useState(false)
   const [account , setAccount] = useState(false)
@@ -27,7 +27,7 @@ export default function Navbar() {
             <i className="fa-solid fa-bars"></i>
           </button>
           <form class="mobile-search" role="search">
-            <input style={{"width" : "35vw" }} class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+            <input style={{"width" : "35vw" }} class="form-control me-2" type="search" placeholder="Search" aria-label="Search" value={search} onChange={(e)=>{setSearch(e.target.value)}}  />
           </form>
   <Link className="navbar-brand" to="/">GoFood</Link>
 
@@ -51,7 +51,7 @@ export default function Navbar() {
      
 
        <div className='d-flex'>
-       <input style={{"width" : "25vw"}} class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+       <input style={{"width" : "25vw"}} class="form-control me-2" type="search" placeholder="Search" aria-label="Search" value={search} onChange={(e)=>{setSearch(e.target.value)}} />
 
     {
         (!localStorage.getItem("authToken"))
