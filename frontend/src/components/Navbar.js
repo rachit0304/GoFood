@@ -66,11 +66,11 @@ export default function Navbar() {
         <Link className="btn bg-white text-success mx-2" style={{width : '60px'}} to="/" onClick={()=>{setCartView(true)}}>Cart {" "} <Badge pill bg="danger">{data.length}</Badge> <span className="sr-only"></span></Link>
 
        {cartView ? <Modal onClose={()=>{setCartView(false)}} ><Cart/></Modal>:null}
-        <Link className="btn bg-white text-success myorders my-0"   to="/myorders">My Orders <span className="sr-only"></span></Link>
+
         <Link className="btn bg-white text-danger mx-2" to="/login" onClick={handleLogout}>Logout <span className="sr-only"></span></Link>
         <li className="nav-item ">
-   
-        {/* <Link className="btn bg-white text-success mx-2" style={{width : '150px'}} to="/" onClick={()=>{setCartView(true)}}>My Account {" "} <span className="sr-only"></span></Link> */}
+         
+        <Link className="btn bg-white text-success myorders my-0"   to="/myorders">My Orders <span className="sr-only"></span></Link>
 
         </li>
         </>
