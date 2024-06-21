@@ -45,20 +45,20 @@ async (req,res)=>{
     
 
     try {
-        let userData =  await user.findOne({email})
+        let userData =  await user.findOne({email: req.body.email})
         if(!userData){
-            console.log(error , 'Enter valid credentials')
+            res.status(400).json({ success: "false", error: "No user found" });
         }
 
         let pwdCompare = bcrypt.compare(req.body.password , userData.password)
 
         if(!pwdCompare){
-            console.log(error , 'Enter valid credentials')
+            res.status(400).json({ success: "false", error: "Enter valid credentials" });
         }
 
         let data = {
             user:{
-                id : userData.id
+                id : userData._id
             }
         }
         const authToken = jwt.sign(data , jwtSecret)
