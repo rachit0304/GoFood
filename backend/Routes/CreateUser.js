@@ -45,7 +45,8 @@ async (req,res)=>{
     
 
     try {
-        let userData =  await user.findOne({email: req.body.email})
+        let userData =  await user.findOne({email: email})
+        
         if(!userData){
             res.status(400).json({ success: "false", error: "No user found" });
         }
@@ -55,6 +56,7 @@ async (req,res)=>{
         if(!pwdCompare){
             res.status(400).json({ success: "false", error: "Enter valid credentials" });
         }
+
 
         let data = {
             user:{
