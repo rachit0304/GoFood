@@ -19,15 +19,13 @@ export default function Login() {
 
       const json = await response.json();
 
-      if(!json.success){
+      if(json.success === false){
           alert("Enter valid credentials")
       }
-      if(json.success){
+      else if(json.success === true){
         localStorage.setItem("userEmail" , credentials.email)
-
         localStorage.setItem("authToken" , json.authToken)
         navigate('/');
-
     }
 
   }
