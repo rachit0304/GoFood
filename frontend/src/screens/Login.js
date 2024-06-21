@@ -7,7 +7,7 @@ export default function Login() {
 
   const [credentials , setcredentials] = useState({email:"", password:"" })
 
-  const HandleSubmit= async(e)=>{
+  const HandleSubmit= async(e)=>{ 
       e.preventDefault();
       const response = await fetch("https://go-food-server.onrender.com/api/loginuser" , {
           method:'POST',
