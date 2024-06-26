@@ -42,33 +42,31 @@ async (req,res)=>{
 router.post('/loginuser',
 async (req,res)=>{  
     let email = req.body.email;
-    
+    let success = false;
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+        return res.status(400).json({ errors: errors.array() })
+    }
 
     try {
-        let userData =  await user.findOne({email: email})
+        let userData =  await user.findOne({email})
         
         if(!userData){
-            res.status(400).json({ success: false, error: "No user found" });
+            return res.status(400).json({ success, error: "No user found" });
         }
 
         let pwdCompare = bcrypt.compare(req.body.password , userData.password)
 
         if(!pwdCompare){
-            res.status(400).json({ success: false, error: "Enter valid credentials" });
+            return res.status(400).json({ success, error: "Enter valid credentials" });
         }
 
-
-        let data = {
-            user:{
-                id : userData._id
-            }
-        }
-        const authToken = jwt.sign(data , jwtSecret)
+        const authToken = jwt.sign({id: userData._id}, jwtSecret)
         res.json({success:true , authToken:authToken})
 
     } catch (error) {   
-        console.log(error);
-        res.json({success:false})
+        console.log(error.message);
+        res.send("server error");
     }
 })
 
