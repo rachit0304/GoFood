@@ -49,41 +49,34 @@ export default function Signup() {
                         <div className="d-flex flex-row align-items-center mb-4">
                             <i className="fas fa-user fa-lg me-3 fa-fw"></i>
                             <div className="form-outline flex-fill mb-0">
-                            <input name='name' autoComplete='off' value={credentials.name} onChange={onChange} type="text" id="form3Example1c" className="form-control" />
-                            <label className="form-label" htmlFor="form3Example1c">Your Name</label>
+                            <input name='name' autoComplete='off' value={credentials.name} onChange={onChange} type="text" id="formname" className="form-control" />
+                            <label className="form-label" htmlFor="formname">Your Name</label>
                             </div>
                         </div>
 
                         <div className="d-flex flex-row align-items-center mb-4">
                             <i className="fas fa-envelope fa-lg me-3 fa-fw"></i>
                             <div className="form-outline flex-fill mb-0">
-                            <input name='email' autoComplete='off' value={credentials.email} onChange={onChange} type="email" id="form3Example3c" className="form-control" />
-                            <label className="form-label" htmlFor="form3Example3c">Your Email</label>
+                            <input name='email' autoComplete='off' value={credentials.email} onChange={onChange} type="email" id="formemail" className="form-control" />
+                            <label className="form-label" htmlFor="formemail">Your Email</label>
                             </div>
                         </div>
 
                         <div className="d-flex flex-row align-items-center mb-4">
                             <i className="fas fa-lock fa-lg me-3 fa-fw"></i>
                             <div className="form-outline flex-fill mb-0">
-                            <input name='password' value={credentials.password} onChange={onChange} type="password" id="form3Example4c" className="form-control" />
-                            <label className="form-label" htmlFor="form3Example4c">Password</label>
+                            <input name='password' value={credentials.password} onChange={onChange} type="password" id="formpass" className="form-control" />
+                            <label className="form-label" htmlFor="formpass">Password</label>
                             </div>
                         </div>
 
                         <div className="d-flex flex-row align-items-center mb-4">
                             <i className="fas fa-key fa-lg me-3 fa-fw"></i>
                             <div className="form-outline flex-fill mb-0">
-                            <input name='address' autoComplete='off' value={credentials.address} onChange={onChange} type="text" id="form3Example4cd" className="form-control" />
-                            <label className="form-label" htmlFor="form3Example4cd">Address</label>
+                            <input name='address' autoComplete='off' value={credentials.address} onChange={onChange} type="text" id="form" className="form-control" />
+                            <label className="form-label" htmlFor="form">Address</label>
                             </div>
                         </div>
-
-                        {/* <div className="form-check d-flex justify-content-center mb-5">
-                            <input className="form-check-input me-2" type="checkbox" value="" id="form2Example3c" />
-                            <label className="form-check-label" htmlFor="form2Example3">
-                            I agree all statements in <a href="#!">Terms of service</a>
-                            </label>
-                        </div> */}
 
                         <div className="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
                             <button type="submit" className="btn btn-primary btn-lg">Register</button>
@@ -98,12 +91,7 @@ export default function Signup() {
                         </form>
 
                     </div>
-                    <div className="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
-
-                        <img src="https://source.unsplash.com/random/500x300/?burger"
-                        className="img-fluid" alt="Sample"/>
-
-                    </div>
+       
                     </div>
                 </div>
                 </div>
