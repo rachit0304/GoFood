@@ -32,7 +32,7 @@ async (req,res)=>{
         }).then(user => {
             const data = {
                 user: {
-                    id: user.id
+                    id: user._id
                 }
             }
             const authToken = jwt.sign(data, jwtSecret);
@@ -50,10 +50,6 @@ async (req,res)=>{
 
 
 router.post('/loginuser',
-            [
-    body('email', "Enter a Valid Email").isEmail(),
-    body('password', "Password cannot be blank").exists(),
-],
 async (req,res)=>{  
     
     let success = false;
@@ -80,13 +76,13 @@ async (req,res)=>{
         }
         
         const data = {
-            user: {
-                id: user.id
+            userData: {
+                id: userData._id
             }
         }
         success = true;
-        const authToken = jwt.sign(data, jwtSecret);
-        res.json({ success, authToken })
+        const authToken = jwt.sign(data, jwtSecret , { expiresIn: '1h'});
+        res.json({ success, authToken });
 
     } catch (error) {   
         console.log(error.message);
