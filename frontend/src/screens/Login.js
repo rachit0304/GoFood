@@ -1,6 +1,6 @@
 import React,{useState } from 'react'
 import { Link , useNavigate } from 'react-router-dom'
-
+import Navbar from '../components/Navbar';
 
 export default function Login() {
   let navigate = useNavigate();
@@ -20,7 +20,7 @@ export default function Login() {
       const json = await response.json();
 
       if(!json.success){
-          alert("Enter valid credentials")
+          alert(json.error);
       }
       else{
         localStorage.setItem("userEmail" , credentials.email)
@@ -36,7 +36,10 @@ export default function Login() {
 
   return (
     <div>
-          <section className="vh-100 gradient-custom">
+        <div>
+        <Navbar />
+      </div>
+    <section className="vh-100 gradient-custom">
   <div className="container py-5 h-100">
     <div className="row d-flex justify-content-center align-items-center h-100">
       <div className="col-12 col-md-8 col-lg-6 col-xl-5">
