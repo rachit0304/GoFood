@@ -18,7 +18,7 @@ export default function Navbar({search, setSearch}) {
   }
 
   return (
-    <div>
+    <div className='lg:w-75 container'>
      <nav className="navbar navbar-expand-lg">
       <div class="container-fluid">
        
@@ -127,9 +127,6 @@ export default function Navbar({search, setSearch}) {
         }
       
         <hr />
-        <form class="mobile-search-menu" role="search">
-          <input style={{"width" : "25vw"}} class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-        </form>
   
       </div>
       </div>
