@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState} from 'react'
 import { useDispatchCart , useCart } from './ContextReducer';
-import { Link , useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 export default function Card(props) {
     const priceRef = useRef();
@@ -13,11 +13,9 @@ export default function Card(props) {
     let navigate = useNavigate();
 
     const handleAddToCart = async ()=>{
-         if(!localStorage.getItem("authToken")){
+        if(!localStorage.getItem("authToken")){
             navigate('/login');
-             return;
         }
-        
         let food = []
         for(const item of data){
             if(item.id === props.fooditem.id)
@@ -38,21 +36,22 @@ export default function Card(props) {
             return
         }
         await dispatch({type:"ADD" ,id: props.fooditem._id, name: props.fooditem.name , price: finalPrice ,qty: qty, size: size })
-
+     
     }
 
     let finalPrice = (qty*parseInt(options[size]))
 
     useEffect(()=>{
         setSize(priceRef.current.value)
+   
     })
 
 
   return ( 
-    <div>
-       <div>
-        <div className="card mt-3" style={{"width": "18rem", "maxHeight" : "360px"}}>
-            <img className="card-img-top" src={props.fooditem.img} alt='burger' style={{height: '150px' , objectFit: 'fill'}}/>
+
+       <div className=''>
+        <div className="card mt-3" style={{width: "16rem"}}>
+            <img className="card-img-top" src={props.fooditem.img} alt={props.fooditem.name} style={{height: '150px' , objectFit: 'cover'}}/>
             <div className="card-body">
                 <h5 className="card-title">{props.fooditem.name}</h5>
               
@@ -82,12 +81,12 @@ export default function Card(props) {
 
                     <hr />
 
-<button className='btn btn-success' onClick={handleAddToCart}>Add to cart</button>
+        <button className='btn btn-success' onClick={handleAddToCart}>Add to cart</button>
 
                 </div>
             </div>
         </div>
     </div>
-    </div>
+  
   )
 }
