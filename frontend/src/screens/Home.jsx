@@ -66,7 +66,7 @@ export default function Home() {
                 return (
                   <div
                     key={filterItems._id}
-                    className="col-12 col-md-12 col-sm-3 col-lg-12 mb-4 card-render"
+                    className="col-12 col-md-5 col-sm-6 col-lg-4 mb-4 m-smm-3 container card-render"
                     
                   >
                     <Card
