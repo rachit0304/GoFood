@@ -49,10 +49,10 @@ export default function Card(props) {
 
   return ( 
 
-       <div className=''>
-        <div className="card mt-3" style={{width: "16rem"}}>
+       <div className='card-main container'>
+        <div className="card mt-3 card-style">
             <img className="card-img-top" src={props.fooditem.img} alt={props.fooditem.name} style={{height: '150px' , objectFit: 'cover'}}/>
-            <div className="card-body">
+            <div className="card-body container">
                 <h5 className="card-title">{props.fooditem.name}</h5>
               
                 <div className="container w-100">
@@ -75,7 +75,7 @@ export default function Card(props) {
 
                     </select>
 
-                    <div className="d-inline h-100 fs-5">
+                    <div className="d-inline h-100 fs-6">
                         ₹{finalPrice}/-
                     </div>
 
