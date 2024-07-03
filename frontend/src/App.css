@@ -58,7 +58,7 @@
   margin: 3% 2%;
 }
 
-.card-render{
+.card-main{
   width: 17rem;
 }
 
@@ -94,6 +94,12 @@
 
 .spinner{
   margin: 10% 0;
+}
+
+@media (max-width: 575.98px) {
+  .m-smm-3{
+    margin-left: 0 !important;
+  }
 }
 
 @media (max-width: 768px) {
