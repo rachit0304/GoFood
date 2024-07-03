@@ -40,6 +40,10 @@
   margin-top: 3%;
 }
 
+.carousel-item img{
+  max-height: 410px;
+}
+
 .myorders{
   margin-bottom: 3%;
   color: yellow;
@@ -52,6 +56,10 @@
 
 .btn{
   margin: 3% 2%;
+}
+
+.card-render{
+  width: 17rem;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -88,7 +96,7 @@
   margin: 10% 0;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 768px) {
   .nav-temp{
       display: none;
   }
@@ -108,12 +116,25 @@
 @media (max-width: 990px) {
 
   .mobile-search{
-      display: inline;
+      display: flex;
   }
-    .nav-temp{
-      display: none;
-  }
-  
+  .nav-temp{
+    display: none;
+}
+.carousel-item img{
+  max-height: 240px;
+}
+.navbar{
+  margin: 0% 3% 2%;
+}
+.card-render{
+  margin-left: 39px;
+}
+
+.card-login{
+  height: 63vw;
+}
+
   .mobile-search-menu{
       display: none;
   }
