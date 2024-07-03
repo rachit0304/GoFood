@@ -40,7 +40,7 @@ export default function Home() {
 
       <Caraousel search={search} setSearch={setSearch} />
 
-      <div className="container justify-items-center lg:w-75 md:w-100">
+      <div className="container lg:w-75 md:w-100">
     {fetching && <Loader />}
 
     {!fetching &&
